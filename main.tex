@@ -1,0 +1,74 @@
+\documentclass[twocolumn, a4j, 9pt, dvipdfmx]{jsarticle}
+
+\usepackage[margin=0.72in, bmargin=1.4in, tmargin=1.3in]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{physics}
+
+\usepackage{authblk}
+\usepackage[linesnumbered,ruled,vlined,noresetcount]{algorithm2e}
+\DontPrintSemicolon
+\SetKwProg{Fn}{function}{:}{end}
+
+\usepackage{color}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{float}
+\newcommand{\vbm}[1]{\begin{bmatrix}#1\end{bmatrix}}  % 角括弧
+\newcommand{\vpm}[1]{\begin{pmatrix}#1\end{pmatrix}}  % 丸括弧
+
+\title{{\red(題目をここに書く)}}
+\date{}
+\author{山田太郎}
+
+\setlength{\columnsep}{1cm}
+\begin{document}
+
+\maketitle
+
+\section{目的}
+\section{実験原理}
+\section{実験方法}
+\section{結果}
+\section{考察}
+引用は\cite{textbook}のように行う。
+\section{結論}
+
+% 図:画像はimg/に設置、文書中で\ref{fig:example}として引用できる。
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{img/sample.png}
+%     \caption{図の説明文}
+%     \label{fig:example}
+% \end{figure}
+
+% 表: - の部分を数字に置き換えればOK。
+% \begin{table}[H]
+% \caption{表の説明文}
+% \label{tab:example}
+% \centering
+% \begin{tabular}{l|llll}\hline\hline
+% & - () & - () & - () & - () \\ \hline
+% - & - & - & - & - \\
+% - & - & - & - & - \\
+% - & - & - & - & - \\ \hline
+% \end{tabular}
+% \end{table}
+
+% 方程式or等式
+% \begin{equation}
+% E\{\epsilon^2\} = E\{(x(t) - y(t - \tau))^2\}
+% \label{eq:example}
+% \end{equation}
+
+% 式変形
+% \begin{align}
+% E\{\epsilon^2\} &= E\{x(t)^2 - 2x(t)y(t - \tau)) + y(t - \tau)^2\} \notag \\
+% &= E\{x(t)^2\} + E\{y(t - \tau)^2\} - 2E\{x(t)y(t - \tau)\}
+% \label{eq:example}
+% \end{align}
+
+\bibliography{Name} %''Name.bib''という名前のスタイルファイルをtexファイルと同一フォルダに配置してbibtexでコンパイル
+\bibliographystyle{abbrv} 
+\end{document}
